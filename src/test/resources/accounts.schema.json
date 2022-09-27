@@ -5,33 +5,40 @@
   "items": {
     "type": "object",
     "required": [
-      "id",
-      "name",
-      "number",
-      "balance",
-      "currency"
+      "args",
+      "data",
+      "files",
+      "form",
+      "headers",
+      "json",
+      "url"
     ],
     "additionalProperties": false,
     "properties": {
-      "id": {
-        "type": "integer"
+      "args": {
+        "type": "object"
       },
-      "name": {
+      "data": {
         "type": "string",
-        "minLength": 1
+        "pattern": "^Data$"
       },
-      "number": {
-        "type": "string",
-        "pattern": "^•• \\d{4}$"
+      "files": {
+        "type": "object"
       },
-      "balance": {
-        "type": "integer",
-        "default": 0
+      "form": {
+        "type": "object"
       },
-      "currency": {
-        "type": "string",
-        "enum": ["RUB", "USD"]
+      "headers": {
+        "type": "object"
+      },
+      "json": {
+        "type": "null"
+      },
+      "url": {
+        "type": "string"
       }
     }
   }
 }
+
+
